@@ -73,6 +73,13 @@ section{
     padding: 10rem 0;
     
 }
+.section-header{
+    margin: 0rem 0 10rem;
+    .bold();
+    font-size: 3.6rem;
+    text-align: center;
+    
+}
 
 /* main */
 .main{
@@ -191,48 +198,210 @@ section{
     } 
 }
 
-
-@media (max-width: 768px){
-    .phone-block{
-        display: inline-block;
+/* Оформление секции с преимуществами */
+.features{
+    &-block{
         text-align: center;
+        h3{
+            .bold();
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        p{
+            display: inline-block;
+            width: 80%;
+            font-size: 1.4rem;
+        }
+    }
+    &-img{
+        height: 8rem;
+        margin-bottom: 3rem;
+        img{
+            display: block;
+            margin: 0 auto; 
+        }
+    }
+}
+.slick-active{
+    outline: none;
+}
+.arrow {
+    top: 50%;
+    transform: translateY(-50%)
+    position: absolute;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    border: none;    
+}
+.prev{
+    left: 0;
+    background: url(../img/features/left-arrow.png) center no-repeat;
+    background-size: 70%;
+}
+.next{
+    right: 0;
+    background: url(../img/features/right-arrow.png) center no-repeat;
+    background-size: 70%;
+}
+
+/* оформление всплывающих окон */
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    padding: 4rem 6rem;
+    &-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+    }
+    &-content{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px){
+    .phone-link{
+        font-size: 1.6rem;
+    }
+    .phone-block{
+        text-align: right;
     }
     .wrap-block{
         text-align: center;
     }
-    .main-title{
-        display: inline-block;
-        text-align: center;
+    .main-content{
+        h1{
+            font-size: 3rem;
+        } 
     }
 }
-@media (max-width: 991px){
+@media (max-width: 992px){
+
+    .phone-block{
+        text-align: right;
+    }
+    .wrap-block{
+        text-align: right;
+    }
+    .phone-link{
+        font-size: 1.6rem;
+    }
+    .main-title{
+        padding-bottom: 2rem;
+        text-align: left;
+    }
+    .main-content{
+        h1{
+            font-size: 2.5rem;
+        } 
+    }
+}
+@media (max-width: 768px){
     .main{
         background-position: top right;
     }
     .phone-block{
         text-align: center;
     }
+    
     .main-content{
         margin-top: 3rem;
+        h1{
+            font-size: 2rem;
+        } 
     }
     .main-title{
+        text-align: center;
+    }
+    .phone-block{
+        text-align: right;
+    }
+    .wrap-block{
+        text-align: right;
+    }
+    .main-content{
+        h1{
+            font-size: 4rem;
+        } 
+    }
+    .main-trigger{
         padding-bottom: 2rem;
-        text-align: center;
     }
 }
-@media (max-width: 1200px){
+@media (max-width: 576px){
+    .main-content{
+        padding-top: 12rem;
+        h1{
+            font-size: 4rem;
+        }
+    }
+    .logo{
+        text-align: center;
+    }
     .phone-block{
-        text-align: right;
+        text-align: center;
+    }
+    .phone-link{
+        font-size: 1.6rem;
+    }
+    .wrap-block{
+        margin-top: 0rem;
+        text-align: center;
+    }
+    .main-title{
+        text-align: center;
+    }
+    
+}
+@media (max-width: 500px){
+    .main-content{
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+        h1{
+            font-size: 1.8rem;
+        } 
+    }
+    .main{
+        background-position: top right;
+    }
+    .phone-block{
+        text-align: center;
     }
     .wrap-block{
         text-align: center;
     }
+    .main-title{
+        text-align: center;
+    }
+    .main-subtitle{
+        font-size: 1.8rem;
+    }
 }
-@media (max-width: 2900px){
+@media (max-width: 1px){
+   .main-content{
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;
+        h1{
+            font-size: 1.8rem;
+        } 
+    }
+    .main{
+        background-position: top right;
+    }
     .phone-block{
-        text-align: right;
+        text-align: center;
     }
     .wrap-block{
         text-align: center;
+    }
+    .main-title{
+        text-align: center;
+    }
+    .main-subtitle{
+        font-size: 1.8rem;
     }
 }
