@@ -35,7 +35,7 @@
                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 col-12">
                            <div class="wrap">
                                <div class="wrap-block">
-                                   <button class="button header-btn">
+                                   <button class="button header-btn popup-btn">
                                     получить консультацию
                                    </button>
                                </div>
@@ -131,6 +131,71 @@
         </div>
     </section>
     
+    <section class="price">
+        <div class="container">
+           <div class="row">
+              
+               <div class="col-md-4 offset-md-4">
+                   <div class="section-header section-header_light">
+                    <h2>Цены</h2>
+                    <p>Выберита вариант, который подходит Вам:</p>
+                   </div>
+               </div>
+               
+               <div class="col-md-4">
+                   <div class="price-button">
+                       <button class="button price-header-btn" data-toggle="modal">Рассичитать точную стоимость</button>
+                   </div>
+               </div>
+               
+           </div>
+           
+           <div class="row">
+               <div class="col-md-4">
+                   <div class="price-block">
+                       <h4>Штукатурка вашим материалом</h4>
+                       <img src="img/prices/1.jpg" alt="Штукатурка вашим материалом">
+                       <span class="price-tag"><br>от 300 руб/м<sup>2</sup></span>
+                       <ul class="price-list">
+                           <li>Проведение работ</li>
+                           <li>Уборка</li>
+                       </ul>
+                       <button class="button">Заказать</button>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="price-block">
+                       <h4>Штукатурка под шпатлёвку</h4>
+                       <img src="img/prices/2.jpg" alt="Штукатурка под шпатлёвку">
+                       <span class="price-tag"><br>от 530 руб/м<sup>2</sup></span>
+                       <ul class="price-list">
+                           <li>Завоз материала и его объем</li>
+                           <li>Проведение работ</li>
+                           <li>Уборка</li>
+                           <li>Гарантия 2 года</li>
+                       </ul>
+                       <button class="button">Заказать</button>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div class="price-block">
+                       <h4>Штукатурка под обои</h4>
+                       <img src="img/prices/3.jpg" alt="Штукатурка под обои">
+                       <span class="price-tag"><br>от 560 руб/м<sup>2</sup></span>
+                       <ul class="price-list">
+                           <li>Завоз материала и его объем</li>
+                           <li>Проведение работ</li>
+                           <li>Уборка</li>
+                           <li>Гарантия 2 года</li>
+                           <li>Можно сразу клеить обои</li>
+                       </ul>
+                       <button class="button">Заказать</button>
+                   </div>
+               </div>
+           </div> 
+                      
+        </div>
+    </section>
     <!-- Модальные окна -->
     
     <!-- Получить консультацию -->
@@ -139,13 +204,13 @@
         <div class="popup-dialog">
            <!-- Содержание модального окна --> 
             <div class="popup-content">
-                <button class="popup-close"></button>
+                <button class="popup-close">&times;</button>
                 <!-- Заголовок окна -->
                 <h4 class="popup-header">
                     Заинтересовало?
                 </h4>
                 <p>Оставьте свои контактные данные <br> для связи</p>
-                <div class="main-form">
+                <div class="main-form popup-form">
                     <form action="#">
                         <label for="#"><strong>Ваше имя</strong></label>
                         <input class="main-form-input" type="text">
@@ -170,6 +235,14 @@
     <!-- Инициализирую сам слайдер -->
     <script>
         $(document).ready(function(){
+            $('.popup-btn').on('click', function(event) {
+                event.preventDefault();
+                $('.popup').fadeIn();                
+            });
+            $('.popup-close').on('click', function(event) {
+                event.preventDefault();
+                $('.popup').fadeOut();
+            });
           $('.features-slider').slick({
             infinite: true,
             slidesToShow: 4,
